@@ -28,14 +28,14 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-public class Appconfig {
+
     @Configuration
     @EnableWebMvc
     @EnableTransactionManagement
     @EnableJpaRepositories("com.codegym.repository")
     @ComponentScan("com.codegym")
     @EnableSpringDataWebSupport
-    public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
+    public class Appconfig implements WebMvcConfigurer, ApplicationContextAware {
 
         private ApplicationContext applicationContext;
 
@@ -114,4 +114,4 @@ public class Appconfig {
             return properties;
         }
     }
-}
+
